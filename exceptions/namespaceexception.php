@@ -1,0 +1,21 @@
+<?php
+namespace SomeNamespace;
+
+class SomeClass {
+
+  function SomeFunction() {
+   try {
+    throw new Exception('Some Error Message');
+   } catch (\Exception $e) {
+    var_dump($e->getMessage());
+   }
+  }
+
+}
+$obj = new SomeClass();
+$obj->SomeFunction();
+
+/*
+When catching an exception inside a namespace it is important that you escape to the global space
+*/
+?>

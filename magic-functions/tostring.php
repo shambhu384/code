@@ -1,0 +1,30 @@
+<?php
+/*
+	Magic funtions
+	@ __toString
+	@ description
+	# this function is automatically called whenever we are trying to access object as string.
+	Using we can access the variable and can manuplate{write}.
+	# __set is run when writing data to inaccessible properties.
+*/
+
+class User{
+		private $name;
+
+		public function __construct($name){
+			$this->name=$name;	
+		}
+	
+		public function __toString(){
+			echo get_class($this);
+		}
+}
+$obj = new User('scott');
+
+/*
+The __toString() method allows a class to decide how it will react when it is treated like a string. For example, what echo $obj; will print. This method must return a string, as otherwise a fatal E_RECOVERABLE_ERROR level error is emitted.
+*/
+
+/*
+* Warning You cannot throw an exception from within a __toString() method. Doing so will result in a fatal error
+*/

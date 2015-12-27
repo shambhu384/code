@@ -1,0 +1,7 @@
+<?php
+class test {
+    const foobar = 'foo';
+  //  const foobar = 'bar';
+}
+
+?>

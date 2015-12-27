@@ -1,0 +1,10 @@
+<?php
+class User{	
+	public function __construct(void){
+	
+	}
+
+}
+
+$obj = new User();
+var_dump($obj);
